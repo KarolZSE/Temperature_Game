@@ -1,0 +1,52 @@
+    #container {
+        display: grid;
+        grid-template-columns: 16% 68% 16%;
+        width: 100%;
+        height: 82%;
+    }
+    #map {
+        background-color: gray;
+        width: 100%;
+        text-align: center;
+        aspect-ratio: 68 / 40;
+        vertical-align: middle;
+    }
+    button {
+        height: 40px;
+        margin-top: auto;
+    }
+
+    #sidebar {
+        margin-top: auto;
+    }
+    #side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #temp {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #popup {
+        position: absolute;
+        font-size: medium;
+        color: aliceblue;
+        text-align: center;
+        width: 60px;
+        background: #333;
+    }
+    #response {
+        display: flex;
+        position: absolute;
+        width: 0;
+        height: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        color: aliceblue;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
