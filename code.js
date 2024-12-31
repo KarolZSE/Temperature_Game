@@ -1,3 +1,4 @@
+// This code is responsible for adjusting elements on the screen (visualy)
     const reset = document.getElementById('reset');
     const buttonid = document.getElementById('button');
     const temp_change = document.getElementById('temp_change');
@@ -12,6 +13,7 @@
     const response = document.getElementById('response');
     response.style.margin = -parseFloat(bodyMargin) + 'px';
 
+// This code is responsible for range and the floating value above it
     const rangeInput = document.getElementById('temp');
     const rangeValue = document.getElementById('rangeValue');
     const popup = document.getElementById('popup');
@@ -23,10 +25,12 @@
         popup.style.left = (value * (rect.width / rangeSum)) + rect.left - (popup.offsetWidth / 2 - rect.left) - (value / rangeSum * 15.75) - rangeInput.offsetLeft + rangeValue.offsetLeft + 'px';
     });
 
+// This is the New Game button
     reset.addEventListener('click', () => {
         location.reload();
         });
 
+// This code starts the work of range element
     const event = new Event('input');
     rangeInput.dispatchEvent(event);
 
@@ -34,6 +38,7 @@
             rangeInput.dispatchEvent(event);
         });
 
+// This is the unit change button
     temp_change.addEventListener('click', () => {
         ctemp.then(result => {
             ctemps = result;
@@ -57,6 +62,7 @@
     });
     });
 
+// this is the lock in button
     buttonid.addEventListener('click', () => {
         if (typeof ctemps === 'undefined') {
         ctemp.then(result => {
@@ -101,6 +107,7 @@
         response.innerHTML = null;
         });
 
+// This is the function that calls all the apis to make the game work
     let ctemp = GetCity(1);
     async function GetCity(b) {
     try {
